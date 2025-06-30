@@ -1,0 +1,139 @@
+# ====================================================================
+# Matplotlib Style Sheet: Data Science Blog Brand (DARK MODE)
+# ====================================================================
+# Author: Gemini
+# Date: 29 June 2025
+# Version: 1.2-dark
+#
+# Description:
+# This stylesheet provides a dark mode theme for the data science blog,
+# inspired by libraries like 'darkly'. It uses a dark background
+# with vibrant, accessible colors to maintain a sophisticated and
+# unique visual identity.
+# ====================================================================
+
+
+### --- I. TYPOGRAPHY --- ###
+# Font settings remain consistent with the light theme for brand continuity.
+font.family: sans-serif
+font.sans-serif: Inter, Arial, DejaVu Sans, Liberation Sans, sans-serif
+font.weight: 400
+
+# Figure-level title
+figure.titlesize: 18
+figure.titleweight: 700
+
+# Axes-level titles
+axes.titlesize: 16
+axes.titleweight: 600
+axes.titlepad: 12.0
+
+# Axes labels
+axes.labelsize: 16
+axes.labelweight: 600
+axes.labelpad: 8.0
+
+# Tick labels
+xtick.labelsize: 12
+ytick.labelsize: 12
+
+
+### --- II. COLORS & BRANDING (DARK MODE) --- ###
+# The vibrant Okabe-Ito palette works well on dark backgrounds.
+#axes.prop_cycle: cycler('color', ['0072B2','E69F00', '56B4E9', '009E73', 'CC79A7', 'D55E00'])
+
+# Alternative color cycler - Extended Okabe-Ito palette with additional colors
+# Uncomment the line below to use this alternative palette:
+axes.prop_cycle: cycler('color', ['EE7733', '0077BB', '33BBEE', 'EE3377', 'CC3311', '009988', 'BBBBBB'])
+
+
+# --- Branded Text Colors (Inverted for Dark Mode) ---
+# Light text colors are used for high contrast against the dark background.
+
+# A bright, near-white for primary text and titles.
+# Provides excellent contrast against the dark background.
+text.color: EAEAEA
+axes.labelcolor: EAEAEA
+axes.titlecolor: EAEAEA
+
+# A slightly dimmer, light grey for secondary text like ticks.
+# Maintains the visual hierarchy (Title > Ticks).
+xtick.color: C0C0C0
+ytick.color: C0C0C0
+
+
+### --- III. LAYOUT & GRID (DARK MODE) --- ###
+# A minimal dark style that lets the data shine.
+
+# Plot background
+# Very dark charcoal for the surrounding page background
+figure.facecolor: 181818
+# Slightly lighter dark slate for the main plot background
+axes.facecolor: 1F1F1F
+
+# Grid settings
+axes.grid: True
+# A subtle, darker grey for grid lines
+grid.color: 444444
+grid.linestyle: -
+grid.linewidth: 1.0
+axes.axisbelow: True
+
+# Remove the top and right spines
+axes.spines.top: False
+axes.spines.right: False
+
+# Make the remaining spines visible but not dominant
+axes.spines.left: True
+axes.spines.bottom: True
+# A medium-dark grey for axis lines
+axes.edgecolor: 555555
+
+
+### --- IV. PLOT ELEMENT STYLES --- ###
+# Consistent styles adapted for dark mode.
+
+lines.linewidth: 2.5
+lines.markersize: 8
+lines.markeredgewidth: 1.5
+
+# For bar charts, use a dark edge to create separation
+patch.edgecolor: 2E2E2E
+patch.linewidth: 0.5
+patch.antialiased: True
+
+legend.frameon: False
+legend.fontsize: 12
+legend.title_fontsize: 13
+legend.loc: best
+
+
+# Tick styles
+xtick.direction: out
+ytick.direction: out
+xtick.major.size: 6
+xtick.major.width: 1
+
+
+### --- V. SAVING FIGURES --- ###
+# High-quality output settings.
+
+savefig.dpi: 300
+savefig.format: png
+savefig.transparent: False
+savefig.bbox: tight
+
+# ====================================================================
+# NOTE ON BRANDED Y-AXIS (DARK MODE):
+# To apply the main brand accent to a single axis title, do so in code:
+#
+# import matplotlib.pyplot as plt
+# plt.style.use('./datascience-brand-dark.mplstyle')
+# fig, ax = plt.subplots()
+#
+# brand_accent = '#E69F00' # The same brand orange
+# ax.set_ylabel('Predictive Accuracy (%)', color=brand_accent, fontweight='bold')
+# ax.set_xlabel('Model Complexity')
+#
+# plt.show()
+# ====================================================================

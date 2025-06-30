@@ -1,0 +1,137 @@
+# ====================================================================
+# Matplotlib Style Sheet: Data Science Blog Brand (v1.2)
+# ====================================================================
+# Author: Gemini
+# Date: 29 June 2025
+# Version: 1.2 - Replaced neutral greys with branded, desaturated
+#                colors for a richer, more unique aesthetic.
+#
+# Description:
+# This stylesheet configures Matplotlib to produce plots with a
+# sophisticated and unique visual identity. It uses deep, muted
+# brand colors for text to avoid a "dull" feel while maintaining
+# a clear visual hierarchy.
+# ====================================================================
+
+
+### --- I. TYPOGRAPHY --- ###
+# Using a clean, professional font family with robust fallbacks.
+font.family: sans-serif
+font.sans-serif: Inter,sans-serif, Arial, DejaVu Sans, Liberation Sans
+font.weight: 400
+
+# Figure-level title (e.g., suptitle)
+figure.titlesize: 18
+figure.titleweight: 700
+
+# Axes-level titles
+axes.titlesize: 16
+axes.titleweight: 600
+axes.titlepad: 12.0
+
+# Axes labels (xlabel, ylabel)
+axes.labelsize: 16
+axes.labelweight: 600
+axes.labelpad: 8.0
+
+# Tick labels (the numbers on the axes)
+xtick.labelsize: 12
+ytick.labelsize: 12
+
+
+### --- II. COLORS & BRANDING (UPDATED) --- ###
+# Based on the accessible Okabe-Ito palette.
+
+# The Brand Accent color is first in the cycle.
+#axes.prop_cycle: cycler('color', ['E69F00', '56B4E9', '009E73', 'CC79A7', '0072B2', 'D55E00'])
+
+# Alternative color cycler - Extended Okabe-Ito palette with additional colors
+# Uncomment the line below to use this alternative palette:
+#axes.prop_cycle: cycler('color', ['EE7733', '0077BB', '33BBEE', 'EE3377', 'CC3311', '009988', 'BBBBBB'])
+
+
+# --- Warm Charcoal Text Colors ---
+# Using warm charcoal colors for labels and ticks as requested.
+
+# Warm charcoal for primary text and titles.
+text.color: 2C3E50
+axes.labelcolor: 2C3E50
+axes.titlecolor: 2C3E50
+
+# Softer warm charcoal for secondary text elements like ticks.
+xtick.color: 5D6D7E
+ytick.color: 5D6D7E
+
+
+### --- III. LAYOUT & GRID --- ###
+# A minimal style that prioritizes the data.
+
+# Plot background
+# Light gray page background
+figure.facecolor: f8f9fa
+# White plot background
+axes.facecolor: FFFFFF
+
+# Grid settings
+axes.grid: True
+# Gray-200 (light and unobtrusive)
+grid.color: e5e7eb
+grid.linestyle: -
+grid.linewidth: 1.0
+axes.axisbelow: True
+
+# Remove the boxy frame around the plot
+axes.spines.top: False
+axes.spines.right: False
+
+# Make the remaining spines subtle
+axes.spines.left: True
+axes.spines.bottom: True
+# Gray-300
+axes.edgecolor: d1d5db
+
+
+### --- IV. PLOT ELEMENT STYLES --- ###
+# Consistent styles for lines, markers, and bars.
+
+lines.linewidth: 2.5
+lines.markersize: 8
+lines.markeredgewidth: 1.5
+
+patch.edgecolor: FFFFFF
+patch.linewidth: 0.5
+patch.antialiased: True
+
+legend.frameon: False
+legend.fontsize: 12
+legend.title_fontsize: 13
+legend.loc: best
+
+xtick.direction: out
+ytick.direction: out
+xtick.major.size: 6
+xtick.major.width: 1
+
+
+### --- V. SAVING FIGURES --- ###
+# Default settings for high-quality output.
+
+savefig.dpi: 300
+savefig.format: png
+savefig.transparent: False
+savefig.bbox: tight
+
+# ====================================================================
+# NOTE ON BRANDED Y-AXIS:
+# To apply the main brand accent to a single axis title, do so in code:
+#
+# import matplotlib.pyplot as plt
+# plt.style.use('./dharmstyle.mplstyle')
+# fig, ax = plt.subplots()
+#
+# brand_accent = '#E69F00'
+# ax.set_ylabel('Predictive Accuracy (%)', color=brand_accent, fontweight='bold')
+# ax.set_xlabel('Model Complexity')
+#
+# plt.show()
+# ====================================================================

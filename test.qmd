@@ -1,0 +1,16 @@
+---
+title: "Test"
+format: html
+execute:
+  echo: true
+  eval: true
+---
+
+```{python}
+#| echo: true
+#| eval: true
+
+print("Hello World!")
+import pandas as pd
+print("Pandas version:", pd.__version__)
+```
